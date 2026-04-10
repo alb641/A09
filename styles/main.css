@@ -1,6 +1,9 @@
 /* custom property */
 :root {
-	--accent-color: #800000;  /* could also be coded #800 */
+	--light-color: #800000;
+	--mid-color: #f6bb73;
+	--dark-color: #000000;
+	--accent-color: #333333;
 	--gradient-color: #f6bb73;
 }
 
@@ -37,9 +40,6 @@ h2 {
 h3 {
 	font-size: 105%;
 }
-ul {
-	margin-left: 2em;
-}
 
 /* the styles for the header */
 header {
@@ -61,6 +61,74 @@ header {
 		float: left;
 		margin: .75em 1em;
 	}
+}
+.navbar {
+	background-color: var(--accent-color);
+}
+.navbar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.menu {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.menu li {
+	flex-basis: 20%;
+	text-align: center;
+	position: relative; 
+}
+
+.navbar a {
+	display: block;
+	padding: 1em;
+	text-decoration: none;
+	color: var(--light-color);
+	margin: 0 1px 2px;
+}
+
+.navbar a:hover,
+.navbar a:focus,
+.navbar a.current {
+	background-color: var(--mid-color);
+	color: var(--dark-color);
+}
+
+.submenu {
+	position: absolute;
+	left: 0;
+	right: 0;
+	background-color: var(--accent-color);
+	color: var(--light-color);
+	display: none; /* hidden by default */
+}
+
+.menu li:hover .submenu {
+	display: block;
+}
+
+.submenu li {
+	display: block;
+}
+
+.submenu li a {
+	margin: 0 2px 2px;
+}
+
+.menu li a small {
+	margin-left: 5px;
+}
+
+.menu > li:first-child a {
+	margin-left: 0;
+}
+
+ul {
+	margin-left: 2em;
+	list-style-type: circle;
 }
 
 /* the styles for the main content */
@@ -112,6 +180,7 @@ footer {
 	border-bottom: 2px solid var(--accent-color);
 	padding: .5em 0 1em;
 }
+
 .speaker {
 	& h1 {
 		color: var(--accent-color);
