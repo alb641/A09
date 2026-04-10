@@ -1,10 +1,10 @@
 /* custom property */
 :root {
-	--light-color: #800000;
-	--mid-color: #f6bb73;
+	--light-color: #ffffff;
+	--mid-color: #FAEBD7;
 	--dark-color: #000000;
 	--accent-color: #333333;
-	--gradient-color: #607466;
+	--gradient-color: #f6bb73;
 }
 
 /* reset */
@@ -101,9 +101,9 @@ header {
 	position: absolute;
 	left: 0;
 	right: 0;
-	background-color: var(--gradient-color);
+	background-color: var(--accent-color);
 	color: var(--light-color);
-	display: none; /* hidden by default */
+	display: none; 
 }
 
 .menu li:hover .submenu {
