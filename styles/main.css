@@ -3,7 +3,7 @@
 	--light-color: #ffffff;
 	--mid-color: #FAEBD7;
 	--dark-color: #000000;
-	--accent-color: #800000;
+	--accent-color: #333333;
 	--gradient-color: #f6bb73;
 }
 
@@ -92,17 +92,19 @@ header {
 }
 
 .menu li {
-	flex-basis: 20%;
-	text-align: center;
-	position: relative; 
+    flex: 1;          
+    text-align: center;
+}
+
+.menu li:has(.submenu) {
+    position: relative;
 }
 
 .submenu {
 	position: absolute;
 	left: 0;
 	right: 0;
-	background-color: var(--mid-color);
-	color: var(--dark-color);
+	background-color: var(--accent-color);
 	display: none; 
 }
 
@@ -110,11 +112,8 @@ header {
 	display: block;
 }
 
-.submenu li {
-	display: block;
-}
-
 .submenu li a {
+	color: var(--light-color);
 	margin: 0 2px 2px;
 }
 
@@ -122,9 +121,8 @@ header {
 	margin-left: 5px;
 }
 
-.menu > li:first-child a {
-	margin-left: 0;
-}
+.menu > li:first-child a { margin-left: 0; }
+.menu > li:last-child a { margin-right: 0; }
 
 ul {
 	margin-left: 2em;
