@@ -71,17 +71,6 @@ header {
 	list-style: none;
 }
 
-.menu {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.menu li {
-	flex-basis: 20%;
-	text-align: center;
-	position: relative; 
-}
-
 .navbar a {
 	display: block;
 	padding: 1em;
@@ -95,6 +84,17 @@ header {
 .navbar a.current {
 	background-color: var(--mid-color);
 	color: var(--dark-color);
+}
+
+.menu {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.menu li {
+	flex-basis: 20%;
+	text-align: center;
+	position: relative; 
 }
 
 .submenu {
