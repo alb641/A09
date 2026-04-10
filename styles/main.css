@@ -4,7 +4,7 @@
 	--mid-color: #f6bb73;
 	--dark-color: #000000;
 	--accent-color: #333333;
-	--gradient-color: #f6bb73;
+	--gradient-color: #607466;
 }
 
 /* reset */
@@ -101,7 +101,7 @@ header {
 	position: absolute;
 	left: 0;
 	right: 0;
-	background-color: var(--accent-color);
+	background-color: var(--gradient-color);
 	color: var(--light-color);
 	display: none; /* hidden by default */
 }
